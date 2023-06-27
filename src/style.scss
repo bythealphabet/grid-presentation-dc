@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --headerHeight: 100px;
+  --footerHeight: 100px;
+
+  /*--------grid Layout-----------*/
+  --mobile-grid-column: minmax(1em, 1fr) repeat(6, minmax(30px, 125px)) minmax(1em, 1fr);
+  --desktop-grid-column: minmax(10em, 1fr) repeat(12, minmax(50px, 125px)) minmax(10em, 1fr);
+  --grid-row-full-page:
+          var(--headerHeight)
+          calc(100vh - (var(--headerHeight) + var(--footerHeight)))
+          var(--footerHeight);
+  --grid-rule-of-thirds: repeat(3, 1fr);
+
+  /*--------colors-----------*/
+  --color-white: #ffffff;
+  --color-dotcontrol-pink: #ff2345;
+  --color-black: #1e1e1e;
+  --color-green: #DBFF00;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background-blend-mode: multiply;
+  background: linear-gradient(to bottom, #1c1c1c 0%, #3f3f3f 60%, #1c1c1c 100%);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.root-grid {
+  display: grid;
+  grid-template-columns: var(--mobile-grid-column);
+  grid-template-rows: var(--grid-row-full-page);
+
+  @media (min-width: 768px) {
+    grid-template-columns: var(--desktop-grid);
+  }
+}
