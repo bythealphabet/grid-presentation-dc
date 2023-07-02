@@ -1,9 +1,5 @@
-<script setup>
-
-</script>
-
 <template>
-  <h1 class="heading"><span class="heading--main">Css Grid</span><span
+  <h1 class="heading"><span class="heading--main">CSS Grid</span><span
       class="heading--sub">The Ultimate Layout Tool</span></h1>
 </template>
 
@@ -20,11 +16,7 @@
     transform: translateX(-1rem);
 
     @media (min-width: 900px) {
-      font-size: 20rem;
-    }
-
-    @media (min-width: 1440px) {
-      font-size: 25rem;
+      font-size: 18rem;
     }
   }
 

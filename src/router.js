@@ -4,12 +4,12 @@ const routes = [
     {
         path: "/",
         name: "index",
-        component: () => import("../containers/core/homepage.vue"),
+        component: () => import("./containers/core/homepage.vue"),
     },
     {
-        path: "/slides",
+        path: "/slides/overview/",
         name: "slides",
-        component: () => import("../containers/slides/Cover.vue"),
+        component: () => import("./containers/slides/overview/overview.vue"),
     },
 ];
 

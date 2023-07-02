@@ -10,8 +10,8 @@
   --footerHeight: 100px;
 
   /*--------grid Layout-----------*/
-  --mobile-grid-column: minmax(1em, 1fr) repeat(6, minmax(30px, 125px)) minmax(1em, 1fr);
-  --desktop-grid-column: minmax(10em, 1fr) repeat(12, minmax(50px, 125px)) minmax(10em, 1fr);
+  --mobile-grid-column: minmax(1rem, 1fr) repeat(6, minmax(3rem, 12.5rem)) minmax(1rem, 1fr);
+  --desktop-grid-column: minmax(5rem, 1fr) repeat(12, minmax(5rem, 12.5rem)) minmax(5rem, 1fr);
   --grid-row-full-page:
           var(--headerHeight)
           calc(100vh - (var(--headerHeight) + var(--footerHeight)))
@@ -22,6 +22,7 @@
   --color-white: #ffffff;
   --color-dotcontrol-pink: #ff2345;
   --color-black: #1e1e1e;
+  --color-grey: #5f6b6d;
   --color-green: #DBFF00;
 }
 

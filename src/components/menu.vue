@@ -1,8 +1,7 @@
-
 <template>
-  <menu :class="{menu:true, 'menu--open':false}">
+  <menu :class="{'menu--open':toggleMenu}" class="menu">
     <li>
-      <router-link class="link-item" to="/grid-1">CSS Grid Overview</router-link>
+      <router-link class="link-item" to="/slides/overview">CSS Grid Overview</router-link>
     </li>
     <li>
       <router-link class="link-item" to="/grid-1">Two Dimensional Power</router-link>
@@ -24,6 +23,7 @@
 
 <style scoped lang="scss">
 .menu {
+  height: 100vh;
   z-index: 10;
   position: absolute;
   inset: 0;
@@ -48,15 +48,19 @@
       color: var(--color-dotcontrol-pink);
     }
   }
-
-  &--open {
-    transform: translateX(0);
-  }
-
+  
   @media (min-width: 900px) {
-    transform: translateX(0);
+    transform: translateX(200%);
+    opacity: 0;
     position: initial;
-    background: transparent;
   }
 }
 </style>
+
+<script setup>
+import {defineProps} from "vue";
+
+const props = defineProps({
+  toggleMenu: Boolean
+})
+</script>
